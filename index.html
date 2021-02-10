@@ -4,52 +4,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Hunter's Portfolio Site</title>
-		<!-- jQuery CDN -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<link href="./styles/main.css" rel="stylesheet" />
-		<style>
-			body {
-				color: black;
-			}
-		</style>
+		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/index.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
-			<h1>Hunter's Portfolio</h1>
-			<h2>January 2021</h2>
+			<h1 id="name">Hunter Estrada</h1>
+			<h2>UI Designer & Developer</h2>
 			<nav>
-				<a href="projects.html">
-					<img src="images/projects-2.jpg" alt="Projects" />
-					<h3>Projects</h3>
-				</a>
-				<a href="skills.html">
-					<img src="images/skills-2.jpg" alt="Skills" />
-					<h3>Skills</h3>
-				</a>
-				<a href="aboutme.html">
-					<img src="images/aboutme.jpg" alt="About Me" />
-					<h3>About Me</h3>
-				</a>
-				<a href="contact.html">
-					<img src="images/contact.jpg" alt="Contact" />
-					<h3>Contact</h3>
-				</a>
+				<div id="projects-card">
+					<a href="projects.html">
+						<h1>Projects</h1>
+					</a>
+				</div>
+				<div id="aboutme-card">
+					<a href="aboutme.html">
+						<h1>About Me</h1>
+					</a>
+				</div>
+				<div id="contact-card">
+					<a href="contact.html">
+						<h1>Contact</h1>
+					</a>
+				</div>
 			</nav>
-			<hr />
 		</header>
 		<main></main>
-		<footer>
-			<hr />
-			<p>Author: Hunter Estrada</p>
-			<p>UCSD CSE134B</p>
-		</footer>
+		<footer></footer>
 	</body>
 </html>
-
-<!-- 
-	What is needed:
-	1. index - splash photos for nav cards
-	2. skills - photos to complement skills
-	3. projects - photos of project UI
-	4. aboutme - photos of trips, basketball/Lakers
--->

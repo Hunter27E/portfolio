@@ -1,0 +1,72 @@
+/* overrides nav styles in styles.css */
+nav {
+	display: grid;
+	grid-template-columns: 40vw;
+	grid-template-rows: auto auto auto;
+	grid-row-gap: 15px;
+	height: 65vh;
+}
+
+header {
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#projects-card {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-size: cover;
+	background-image: url('../images/blue-polygons.jpg');
+	background-color: blue; /* fallback for image */
+}
+
+#aboutme-card {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-size: cover;
+	background-image: url('../images/red-polygons.jpg');
+	background-color: yellow; /* fallback for image */
+}
+
+#contact-card {
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background-size: cover;
+	background-image: url('../images/green-polygons.jpg');
+	background-color: green; /* fallback for image */
+}
+
+div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+div:hover a {
+	color: black;
+}
+
+#name {
+	text-shadow: 1px 1px 1px #03d3fc;
+	width: auto;
+	overflow: hidden;
+	white-space: nowrap;
+	-margin: 0 auto;
+	margin-bottom: 2px;
+	animation: typing 1s steps(40, end);
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 225px;
+	}
+}

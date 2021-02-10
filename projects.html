@@ -3,14 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Hunter's Portfolio</title>
-		<link href="./styles/main.css" rel="stylesheet" />
+		<link href="styles/styles.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
 			<nav>
 				<a href="index.html">Home</a>
 				<a href="projects.html">Projects</a>
-				<a href="skills.html">Skills</a>
 				<a href="aboutme.html">About Me</a>
 				<a href="contact.html">Contact</a>
 			</nav>
@@ -37,141 +36,9 @@
 					</li>
 				</ul>
 			</div>
-			<div>
-				<h2>My Experiments</h2>
-				<p>
-					The following are my <code>html tag</code> expriments. It contains
-					these elements:
-				</p>
-				<ol>
-					<li>pre</li>
-					<li>aside</li>
-					<li>picture</li>
-					<li>iframe</li>
-					<li>audio</li>
-					<li>video</li>
-					<li>source</li>
-					<li>canvas</li>
-					<li>svg</li>
-					<li>ol</li>
-					<li>optgroup</li>
-					<li>textarea</li>
-					<li>datalist</li>
-					<li>select</li>
-					<li>option</li>
-					<li>details</li>
-					<li>summary</li>
-					<li>template</li>
-					<li>figure</li>
-					<li>figcaption</li>
-				</ol>
-				<pre> This is a pre, all whitespace is...       preserved.</pre>
-				<aside>
-					This aside content would generally go on the sidebar of a website, but
-					I do not have a sidebar.
-				</aside>
-				<textarea> How are you? </textarea>
-				<h4>picture Tag:</h4>
-				<picture>
-					<!-- if width of screen >= 650px, skills will render, otherwise projects will-->
-					<source media="(min-width:650px)" srcset="images/contact.jpg" />
-					<img src="images/projects.jpg" alt="screenTooSmllForContact" />
-				</picture>
-				<h4>iframe tag:</h4>
-				<iframe
-					src="https://vcr-app.herokuapp.com"
-					title="virtual cinema records"
-					width="600"
-					height="600"
-				></iframe>
-				<h4>audio tag:</h4>
-				<a href="https://www.zapsplat.com/sound-effect-category/elephant/">
-					Sound from ZapSplat</a
-				>
-				<audio controls>
-					<source src="media/elephant.mp3" />
-					Your browser somehow can't play this MP3.
-				</audio>
-				<h4>video tag:</h4>
-				<video width="400" height="400" controls>
-					<source src="media/watering.mp4" />
-					Your browser somehow can't play this MP4.
-				</video>
-				<h4>canvas tag:</h4>
-				<canvas id="onlyCanvas">
-					Your browser somehow can't show this canvas element.
-				</canvas>
-				<!-- JS only for purpose of canvas demonstration -->
-				<script>
-					var canvas = document.getElementById('onlyCanvas');
-					var ctx = canvas.getContext('2d');
-					ctx.fillStyle = '#FF0000';
-					ctx.fillRect(0, 0, 150, 150);
-				</script>
-				<h4>svg tag:</h4>
-				<svg>
-					<circle
-						cx="100"
-						cy="80"
-						r="50"
-						stroke="blue"
-						stroke-width="10"
-						fill="black"
-					/>
-				</svg>
-				<h4>optgroup, select, and option tags:</h4>
-				<form>
-					<label>What is your favorite browser?</label>
-					<select name="Browser">
-						<optgroup label="My Favorite">
-							<option value="Safari">Safari</option>
-							<option value="Chrome">Chrome</option>
-						</optgroup>
-						<optgroup label="Other's Favorites">
-							<option value="IE">IE</option>
-							<option value="other">Other</option>
-						</optgroup>
-					</select>
-					<br />
-					<input type="submit" value="Tell Me" />
-				</form>
-				<h4>datalist tag:</h4>
-				<form>
-					<label for="datalist">What is your favorite Marvel superhero?</label>
-					<input list="superheroes" id="datalist" />
-					<datalist id="superheroes">
-						<option value="Hulk">Hulk</option>
-						<option value="Spider-Man">Spider-Man</option>
-						<option value="Other">Other</option>
-					</datalist>
-					<input type="submit" value="Tell Me" />
-				</form>
-				<br />
-				<details>
-					<summary>What is coding?</summary>
-					<ul>
-						<li>Problem-Solving</li>
-						<li>Abstract Thinking</li>
-						<li>Searching for missing brackets</li>
-						<li>Utter joy when you finally fix a bug</li>
-					</ul>
-				</details>
-				<h4>
-					You can't see it, but there's a template here. With figure and
-					figcaption inside
-				</h4>
-				<template>
-					<figure>
-						<img src="images/bernie.jpg" alt="bernie" />
-						<figcaption>
-							You don't remmber Bernie being in Forrest Gump?f
-						</figcaption>
-					</figure>
-				</template>
-			</div>
 		</main>
+		<hr />
 		<footer>
-			<hr />
 			<p>Author: Hunter Estrada</p>
 			<p>UCSD CSE134B</p>
 		</footer>

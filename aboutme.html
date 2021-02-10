@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Hunter's Portfolio</title>
-		<link href="./styles/main.css" rel="stylesheet" />
+		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/aboutme.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
 			<nav>
 				<a href="index.html">Home</a>
 				<a href="projects.html">Projects</a>
-				<a href="skills.html">Skills</a>
 				<a href="aboutme.html">About Me</a>
 				<a href="contact.html">Contact</a>
 			</nav>
@@ -19,55 +19,85 @@
 		<main>
 			<section>
 				<h2>Who Am I?</h2>
-				<div>
+				<div id="whoami">
 					<p>
-						My name is <b><i>Hunter Estrada</i></b> and I am from Los Angeles,
-						CA. I am a 3rd year student at UCSD majoring in computer science to
-						become a UI designer. I am also an avid outdoorsman and sports fan.
+						My name is Hunter Estrada and I am from Los Angeles, CA. I am a 3rd
+						year student at UCSD majoring in computer science to become a UI
+						designer. I am also an avid outdoorsman and sports fan. Basketball
+						and the Lakers. I've played since I was five and still play to this
+						day. I love going to the Staples Center and seeing the Lakers play.
+						The outdoors. Hiking, camping, bouldering, road-tripping. Desert,
+						forest, mountains, beach. All of it. I love visiting National Parks,
+						Joshua Tree and Mount Rainier being my favorites. The fresh air, the
+						still quietness, the grand landforms - there's nothing better.
 					</p>
-					<span>
-						<img src="images/aboutme.jpg" alt="pic1" />
-						<img src="images/aboutme.jpg" alt="pic2" />
-					</span>
+					<img id="first" />
+					<img id="second" />
 				</div>
 			</section>
 			<section>
-				<h2>What Am I Interested In?</h2>
-				<p>
-					Basketball and the Lakers. I've played since I was five and still play
-					to this day. I love going to the Staples Center and seeing the Lakers
-					play.
-					<br />
-					The outdoors. Hiking, camping, bouldering, road-tripping. Desert,
-					forest, mountains, beach. All of it. I love visiting National Parks,
-					Joshua Tree and Mount Rainier being my favorites. The fresh air, the
-					still quietness, the grand landforms - there's nothing better.
-				</p>
-				<span>
-					<img src="images/aboutme.jpg" alt="pic1" />
-					<img src="images/aboutme.jpg" alt="pic2" />
-				</span>
+				<h2>What Are My Skills?</h2>
+				<table>
+					<!-- used to style by columns of table -->
+					<colgroup>
+						<col span="1" id="techSkills" />
+						<col span="1" id="softSkills" />
+					</colgroup>
+					<tr>
+						<th>Technical Skills</th>
+						<th>Soft Skills</th>
+					</tr>
+					<tr>
+						<td>HTML</td>
+						<td>Collaborative Worker</td>
+					</tr>
+					<tr>
+						<td>Java</td>
+						<td>Strong Communicator</td>
+					</tr>
+					<tr>
+						<td>CSS</td>
+						<td>Problem-Solver</td>
+					</tr>
+					<tr>
+						<td>JavaScript</td>
+						<td>Dedicated Worker</td>
+					</tr>
+					<tr>
+						<td>ReactJS</td>
+						<td>Self Starter</td>
+					</tr>
+					<tr>
+						<td>React Native</td>
+						<td>Strong Interpersonal Skills</td>
+					</tr>
+					<tr>
+						<td>Python</td>
+						<td>Organized</td>
+					</tr>
+				</table>
 			</section>
 			<section>
 				<h2>What Are My Goals?</h2>
 				<p>
 					I'm studying at UCSD as a computer science major to become a UI
-					developer. Coming into college I had no idea what computer science
-					even was until I took my first course freshman year. That class
-					introduced me to something so new and expansive that I chose to pursue
-					the major. Computer science is nothing like I had ever learned before,
-					and that is why I pursue the career.
+					designer and developer. Coming into college I had no idea what
+					computer science even was until I took my first course freshman year.
+					That class introduced me to something so new and expansive that I
+					chose to pursue the major. Computer science is nothing like I had ever
+					learned before, and that is why I pursue the career.
 				</p>
-				<span>
-					<img src="images/aboutme.jpg" alt="pic1" />
-					<img src="images/aboutme.jpg" alt="pic2" />
-				</span>
 			</section>
 		</main>
+		<hr />
 		<footer>
-			<hr />
 			<p>Author: Hunter Estrada</p>
 			<p>UCSD CSE134B</p>
 		</footer>
 	</body>
 </html>
+
+<!--
+	Tech Skills: HTML, CSS, JS, Java, ReactJS, Redux, Python
+	Soft Skills: collaborative worker, strong communicator, problem-solver
+-->

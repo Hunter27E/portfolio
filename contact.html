@@ -3,36 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Hunter's Portfolio</title>
-		<link href="./styles/main.css" rel="stylesheet" />
+		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/contact.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
 			<nav>
 				<a href="index.html">Home</a>
 				<a href="projects.html">Projects</a>
-				<a href="skills.html">Skills</a>
 				<a href="aboutme.html">About Me</a>
 				<a href="contact.html">Contact</a>
 			</nav>
 		</header>
 		<main>
-			<br />
-			<p>Thanks for reaching out, I will get back to you ASAP.</p>
 			<form>
-				<fieldset>
-					<legend>Your Contact Information</legend>
-					<label> Name </label>
-					<input type="text" />
-					<label> Email Address </label>
-					<input type="text" />
-					<label> Phone Number </label>
-					<input type="text" />
-					<button type="submit">Submit</button>
-				</fieldset>
+				<h2>Contact Me</h2>
+				<label for="name"> Name </label>
+				<input type="text" id="name" required="required" size="25" />
+				<label for="email"> Email Address </label>
+				<input type="text" id="email" required="required" size="25" />
+				<label for="phone"> Phone Number </label>
+				<input type="text" id="phone" size="25" />
+				<button type="submit">Submit</button>
 			</form>
 		</main>
+		<hr />
 		<footer>
-			<hr />
 			<p>Author: Hunter Estrada</p>
 			<p>UCSD CSE134B</p>
 		</footer>
