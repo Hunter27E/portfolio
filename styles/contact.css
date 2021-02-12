@@ -30,3 +30,24 @@ h1 {
 #contactTab {
 	color: #3fd96d;
 }
+
+/* Experiments Styles */
+
+#transformationTest {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}
+#transformationTest:hover {
+	transform: translate(100px, 0px);
+}
+
+#transitionTest {
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	transition: width 2s;
+}
+#transitionTest:hover {
+	width: 500px;
+}

@@ -1,5 +1,12 @@
+:root {
+	--customgreen: #3fd96d;
+	--vcrHomeDesktopWidth: 976px;
+	--vcrHomeMobileWidth: 414px;
+	--servicemateWidth: 405px;
+}
+
 #projectsTab {
-	color: #3fd96d;
+	color: var(--customgreen);
 }
 
 h1 {
@@ -10,7 +17,7 @@ h1 {
 .jumbo {
 	position: relative;
 	margin: 0 auto; /* centers img and div */
-	max-width: 976px; /* width of image */
+	max-width: var(--vcrHomeDesktopWidth); /* width of image */
 	display: flex;
 	justify-content: space-between;
 }
@@ -22,15 +29,14 @@ h1 {
 	background-color: rgb(0, 0, 0); /* fallback */
 	background-color: rgba(0, 0, 0, 0.85);
 	width: 100%;
-	max-width: 976px; /* width of image */
 }
 
 #servicemateDescription {
-	max-width: 405px;
+	max-width: var(--servicemateWidth);
 }
 
 h3 {
-	color: #3fd96d;
+	color: var(--customgreen);
 }
 
 #servicemateJumbo {
@@ -38,4 +44,28 @@ h3 {
 }
 
 @media screen and (max-width: 976px) {
+	.jumbo {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+		position: static;
+	}
+
+	.projectDescription {
+		position: static;
+		padding: 10px;
+	}
+
+	#vcrDescription {
+		max-width: var(--vcrHomeMobileWidth);
+	}
+
+	#servicemateDescription {
+		max-width: var(--servicemateWidth);
+	}
+
+	#servicemateLogin {
+		display: none;
+	}
 }
