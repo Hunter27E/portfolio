@@ -7,6 +7,11 @@ nav {
 	height: 65vh;
 }
 
+#name {
+	margin-top: -10px;
+	font-size: 50px;
+}
+
 header {
 	height: 95vh;
 	display: flex;
@@ -19,7 +24,7 @@ header {
 	grid-row-start: 1;
 	grid-row-end: 2;
 	background-size: cover;
-	background-image: url('../images/blue-polygons.jpg');
+	background-image: url('../images/index/blue-polygons.jpg');
 	background-color: blue; /* fallback for image */
 }
 
@@ -27,7 +32,7 @@ header {
 	grid-row-start: 2;
 	grid-row-end: 3;
 	background-size: cover;
-	background-image: url('../images/red-polygons.jpg');
+	background-image: url('../images/index/red-polygons.jpg');
 	background-color: yellow; /* fallback for image */
 }
 
@@ -35,7 +40,7 @@ header {
 	grid-row-start: 3;
 	grid-row-end: 4;
 	background-size: cover;
-	background-image: url('../images/green-polygons.jpg');
+	background-image: url('../images/index/green-polygons.jpg');
 	background-color: green; /* fallback for image */
 }
 
@@ -67,6 +72,6 @@ div:hover a {
 		width: 0;
 	}
 	to {
-		width: 225px;
+		width: 350px; /* width of name */
 	}
 }

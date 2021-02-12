@@ -1,6 +1,6 @@
 main {
 	height: 85vh;
-	background-image: url('../images/geo-cubes.jpg');
+	background-image: url('../images/contact/geo-cubes.jpg');
 	background-size: cover;
 	display: flex;
 	align-items: center;
@@ -23,6 +23,10 @@ label {
 	width: inherit;
 }
 
-h2 {
+h1 {
 	font-size: 50px;
+}
+
+#contactTab {
+	color: #3fd96d;
 }

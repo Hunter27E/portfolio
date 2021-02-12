@@ -4,37 +4,64 @@
 		<meta charset="UTF-8" />
 		<title>Hunter's Portfolio</title>
 		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/projects.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
 			<nav>
 				<a href="index.html">Home</a>
-				<a href="projects.html">Projects</a>
+				<a id="projectsTab" href="projects.html">Projects</a>
 				<a href="aboutme.html">About Me</a>
 				<a href="contact.html">Contact</a>
 			</nav>
 		</header>
 		<main>
-			<div>
-				<h2>My Projects</h2>
-				<ul>
-					<li>
-						<strong><em>Virtual Cinema Records</em></strong>
-						A desktop website for movie recommendations. Users can search up any
-						movie and rate it, like it, or dislike it. Based on those user
-						preferences, VCR will recommend movies to the user on the homepage.
-						Once the user finds a movie that interests them, they can easily
-						click the link for where it is available for streaming. It is an all
-						encompassing movie recommendation and catalogue site.
-					</li>
-					<li>
-						<strong><em>CarMate</em></strong>
+			<h1>Projects</h1>
+			<div class="jumbo">
+				<picture>
+					<source
+						srcset="images/projects/vcr-home-desktop.jpg"
+						media="(min-width: 976px)"
+					/>
+					<img src="images/projects/vcr-home-mobile.jpg" alt="VCR Homepage" />
+				</picture>
+				<div class="projectDescription">
+					<h3>Virtual Cinema Records</h3>
+					<p>
+						For people who want to keep track of the movies they've seen and
+						easily get recommendations for their weekend movie nights. Users can
+						search any title, read its synopsis and cast, find movies similar to
+						it, and see where they can stream the movie. Users with accounts can
+						like, dislike, and rate movies they've seen and store them in their
+						movie catalogue. They can then get personalized movie
+						recommendations by genre, actor, and similar movies.
+					</p>
+				</div>
+			</div>
+			<div class="jumbo" id="servicemateJumbo">
+				<picture>
+					<source
+						srcset="images/projects/servicemate-home.jpg"
+						media="(min-width: 976px)"
+					/>
+					<img src="images/projects/vcr-home-mobile.jpg" alt="VCR Homepage" />
+				</picture>
+				<picture>
+					<source
+						srcset="images/projects/servicemate-login.jpg"
+						media="(min-width: 976px)"
+					/>
+					<img src="images/projects/vcr-home-mobile.jpg" alt="VCR Homepage" />
+				</picture>
+				<div class="projectDescription" id="servicemateDescription">
+					<h3>ServiceMate</h3>
+					<p>
 						A mobile app for tracking maintenance on your car. Using the app,
 						users can get notifications for when it is time to do any service on
 						their vehicle, as well as track all their service history on all of
 						their vehicles.
-					</li>
-				</ul>
+					</p>
+				</div>
 			</div>
 		</main>
 		<hr />
