@@ -79,6 +79,28 @@ p {
 	line-height: 1.65;
 }
 
+nav a {
+	width: 25%;
+	text-align: center;
+	height: 100%;
+}
+
 #aboutmeTab {
 	color: var(--customgreen);
+	color: #3fd96d;
+	background-color: white;
+	border-radius: 12px;
+}
+
+@media screen and (max-width: 400px) {
+	img {
+		width: 360px;
+	}
+
+	th,
+	tr,
+	#skills,
+	#goals {
+		max-width: 350px;
+	}
 }

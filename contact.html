@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-190775516-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-190775516-1');
+		</script>
+
+		<script src="js/form.js"></script>
+
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
@@ -20,15 +37,15 @@
 			</nav>
 		</header>
 		<main>
-			<form>
+			<form action="https://formspree.io/f/mwkwdodq" method="POST">
 				<h1>Contact Me</h1>
 				<label for="name"> Name </label>
-				<input type="text" id="name" required="required" size="25" />
+				<input type="text" id="name" name="name" required size="25" />
 				<label for="email"> Email Address </label>
-				<input type="text" id="email" required="required" size="25" />
+				<input type="text" id="email" name="email" required size="25" />
 				<label for="phone"> Phone Number </label>
-				<input type="text" id="phone" size="25" />
-				<button type="submit">Submit</button>
+				<input type="text" id="phone" name="phone" size="25" />
+				<button type="submit">Send</button>
 			</form>
 		</main>
 		<hr />

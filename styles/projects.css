@@ -5,8 +5,17 @@
 	--servicemateWidth: 405px;
 }
 
+nav a {
+	width: 25%;
+	text-align: center;
+	height: 100%;
+}
+
 #projectsTab {
 	color: var(--customgreen);
+	color: #3fd96d;
+	background-color: white;
+	border-radius: 12px;
 }
 
 h1 {
@@ -67,5 +76,9 @@ h3 {
 
 	#servicemateLogin {
 		display: none;
+	}
+
+	img {
+		max-width: 365px;
 	}
 }
