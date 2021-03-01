@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Styled CRUD</title>
+		<script src="js/styledblog.js" type="module"></script>
+		<link rel="stylesheet" href="styles/styledcrud.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+	</head>
+	<body>
+		<div id="disabler"></div>
+		<header>
+			<h1>Hunter's Blog</h1>
+		</header>
+		<main>
+			<button id="add"><i class="material-icons">add_box</i></button>
+		</main>
+
+		<dialog id="addModal">
+			<input type="text" placeholder="Title" name="title" />
+			<textarea
+				name="desc"
+				id="descAdd"
+				placeholder="Description"
+				cols="30"
+				rows="2"
+			></textarea>
+			<i class="material-icons">cancel</i>
+			<i class="material-icons">check_circle</i>
+		</dialog>
+
+		<dialog id="updateModal">
+			<input type="text" placeholder="Title" name="title" />
+			<textarea
+				name="desc"
+				id="descUpdate"
+				placeholder="Description"
+				cols="30"
+				rows="2"
+			></textarea>
+			<i class="material-icons">cancel</i>
+			<i class="material-icons">check_circle</i>
+		</dialog>
+
+		<dialog id="deleteModal">
+			<p>You sure you want to delete?</p>
+			<i class="material-icons">cancel</i>
+			<i class="material-icons">check_circle</i>
+		</dialog>
+	</body>
+</html>

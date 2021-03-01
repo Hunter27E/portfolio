@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Custom Dialogs</title>
+		<script src="js/customdialogs.js"></script>
+		<!-- DOMPurify CDN: Input Sanitizer -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js"></script>
+		<style>
+			section {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 99vw;
+				height: 50vw;
+			}
+
+			dialog {
+				display: none;
+				border-color: red;
+			}
+
+			.activated {
+				display: block;
+			}
+
+			dialog button {
+				border: 0;
+				color: red;
+			}
+
+			main > div {
+				height: 100vh;
+				width: 100vw;
+				background-color: rgba(0, 0, 0, 0.3);
+				position: absolute;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Custom Dialogs</h1>
+		</header>
+		<hr />
+		<main>
+			<div></div>
+			<button id="alert">Alert</button>
+			<button id="confirm">Confirm</button>
+			<button id="prompt">Prompt</button>
+			<output></output>
+			<section>
+				<dialog>
+					<template>
+						<div>
+							<p>Pay attention, this is an Alert!</p>
+							<button id="dismissAlert">Dismiss Alert</button>
+						</div>
+					</template>
+					<template>
+						<div>
+							<p>Either confirm or reject this.</p>
+							<button id="noConfirm">Cancel</button>
+							<button id="yesConfirm">Confirm</button>
+						</div>
+					</template>
+					<template>
+						<div>
+							<label for="promptInput"
+								>Prompting you to tell me something.</label
+							>
+							<input type="text" id="promptInput" name="promptInput" value="" />
+							<button id="noPrompt">Cancel</button>
+							<button id="yesPrompt">Submit</button>
+						</div>
+					</template>
+				</dialog>
+			</section>
+		</main>
+		<footer></footer>
+	</body>
+</html>
