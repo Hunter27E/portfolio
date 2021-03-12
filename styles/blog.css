@@ -1,0 +1,77 @@
+#disabler {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+nav a {
+	width: 20%;
+	text-align: center;
+	height: 100%;
+}
+
+#blogTab {
+	color: var(--customgreen);
+	color: #3fd96d;
+	background-color: rgba(255, 255, 255, 0.25);
+	border-radius: 12px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+}
+
+#signedout input {
+	width: 200px;
+	height: 25px;
+	border: 1px solid white;
+}
+
+#signedin,
+#signedout {
+	display: none; /* start off this way to avoid content change on load */
+}
+
+i {
+	cursor: pointer;
+}
+
+#add {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+#blogs {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.blogCard {
+	width: 90%;
+	max-width: 400px;
+	background-color: white;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+.blogCard h2 {
+	margin: auto auto 0 auto;
+	background-color: hotpink;
+	padding: 10px;
+}
+
+.blogCard p,
+.blogCard i {
+	margin: 0;
+	background-color: white;
+	color: black;
+	padding: 10px;
+}
+
+dialog {
+	border: 2px solid red;
+	bottom: 200px;
+}

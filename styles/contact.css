@@ -29,14 +29,14 @@ h1 {
 }
 
 nav a {
-	width: 25%;
+	width: 20%;
 	text-align: center;
 	height: 100%;
 }
 
 #contactTab {
 	color: #3fd96d;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.25);
 	border-radius: 12px;
 }
 

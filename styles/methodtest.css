@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Anton');
+
+* {
+	font-family: Barlow;
+}
+
+header {
+	text-align: center;
+	color: white;
+	background-color: #333;
+}
+
+h1 {
+	font-family: Anton;
+}
+
+input,
+label {
+	display: block;
+}
+
+input,
+textarea {
+	margin-bottom: 10px;
+}
+
+button {
+	margin-top: 10px;
+	border: 2px solid black;
+	width: 60px;
+	height: 30px;
+}
+
+#postBtn {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+#getBtn {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+
+#putBtn {
+	background-color: rgba(0, 0, 255, 0.5);
+}
+
+#deleteBtn {
+	background-color: rgba(0, 255, 255, 0.5);
+}
+
+pre {
+	overflow: scroll;
+}

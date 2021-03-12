@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<title>Blogs</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link rel="stylesheet" href="styles/blog.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+		<!-- FIREBASE START-->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+		<script src="js/auth.js" type="module"></script>
+		<script src="js/store.js" type="module"></script>
+		<!-- FIREBASE END -->
+		<!-- GOOGLE ANALYTICS START -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-190775516-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-190775516-1');
+		</script>
+		<!-- GOOGLE ANALYTICS END -->
+	</head>
+	<body>
+		<!-- simulates everything under dialog being disabled -->
+		<div id="disabler"></div>
+		<header>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="projects.html">Projects</a>
+				<a href="aboutme.html">About Me</a>
+				<a href="contact.html">Contact</a>
+				<a id="blogTab" href="blog.html">Blog</a>
+			</nav>
+			<h1>My Blog</h1>
+		</header>
+		<main>
+			<!-- account status, login/logout functions -->
+			<section id="signedin">
+				<p>You are signed in with...</p>
+				<button id="signout">Sign Out</button>
+			</section>
+			<section id="signedout">
+				<p>You are not signed in.</p>
+				<input name="email" type="text" placeholder="Email" />
+				<input name="pass" type="text" placeholder="Password" />
+				<button id="signin">Sign In</button>
+			</section>
+			<!-- add new blog if authenticated user -->
+			<i id="add" class="material-icons">add</i>
+			<section id="blogs"></section>
+
+			<!-- dialog for adding blog -->
+			<dialog id="addDialog">
+				<input name="title" type="text" placeholder="Title" />
+				<textarea cols="20" rows="3" placeholder="Description"></textarea>
+				<i class="material-icons">cancel</i>
+				<i class="material-icons">check_circle</i>
+			</dialog>
+			<!-- dialog for updating blog -->
+			<dialog id="updateDialog">
+				<input name="title" type="text" placeholder="Title" />
+				<textarea cols="20" rows="3" placeholder="Description"></textarea>
+				<i class="material-icons">cancel</i>
+				<i class="material-icons">check_circle</i>
+			</dialog>
+			<!-- dialog for deleting blog -->
+			<dialog id="deleteDialog">
+				<p>Are you sure you want to delete this blog?</p>
+				<i class="material-icons">cancel</i>
+				<i class="material-icons">check_circle</i>
+			</dialog>
+		</main>
+		<footer></footer>
+	</body>
+</html>
