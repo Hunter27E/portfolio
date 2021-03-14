@@ -27,11 +27,18 @@ figure {
 	/* default LR margins are 40px */
 	margin-left: 20px;
 	margin-right: 20px;
+	/* used to make caption same width as img */
+	display: table;
 }
 
 figcaption {
 	text-align: center;
-	max-width: 400px;
+	background-color: rgba(255, 255, 255, 0.9);
+	color: black;
+	/* used to make caption same width as img */
+	display: table-caption;
+	caption-side: bottom;
+	padding: 5px;
 }
 
 #skills,

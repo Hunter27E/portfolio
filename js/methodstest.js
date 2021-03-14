@@ -29,7 +29,7 @@ const sendReq = (e) => {
 			})
 			.catch((e) => console.log('Fetch Error'));
 	}
-	// send POST/PUT/DELETE
+	// send POST/PUT
 	else {
 		// get info that will be sent in request
 		let name = document.getElementsByName('art_name')[0].value;

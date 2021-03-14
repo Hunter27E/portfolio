@@ -49,13 +49,16 @@ SEO: 100
 **Scores After Improvements**
 Performance: 99
 Accessibility: 100
-Best Practices: 88
+Best Practices: 93
 SEO: 100
 
 **Changes Made**
 
 1. Change background color of navbar tab to make tab name more legible
 2. Changes background colors of skills table to make words more legible
+3. Changed restrictions on sizes of images to always display them in their natural aspect ratio
+4. Added more responsiveness to make sure all content fits within the screen and images are not distorted
+5. Made captions of images dynamically adjust to image size rather than hardcoding the image and caption size
 
 ## Contact Page
 
