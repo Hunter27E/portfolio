@@ -37,6 +37,7 @@ SEO: 100
 
 1. Change background color of navbar tab to make tab name more legible
 2. Changed h2 headers to h3 headers to abide by the correct structure of headers
+3. Changed some divs to sections to improve use of semantic HTML
 
 ## About Me Page
 
