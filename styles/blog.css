@@ -75,3 +75,17 @@ dialog {
 	border: 2px solid red;
 	bottom: 200px;
 }
+
+dialog input,
+dialog textarea {
+	width: 100%;
+}
+
+#delError,
+#addError,
+#updateError,
+#updateNotOwner {
+	background-color: red;
+	border: none;
+	color: white;
+}
