@@ -81,6 +81,15 @@ function fetchBlogs() {
 			// console.log(doc.data());
 			renderArticle(doc.data(), doc.id);
 		});
+		let is = document.querySelectorAll('i');
+		// fixes refreshing page when user is signed out and update/delete icons are visible
+		if (auth.user.currentUser != null) {
+			// show icons
+			is.forEach((i) => (i.style.visibility = 'visible'));
+		} else {
+			// hide icons
+			is.forEach((i) => (i.style.visibility = 'hidden'));
+		}
 	});
 }
 
