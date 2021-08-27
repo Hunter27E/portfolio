@@ -1,81 +1,335 @@
-/* overrides nav styles in styles.css */
-nav {
-	display: grid;
-	grid-template-columns: 40vw;
-	grid-template-rows: auto auto auto;
-	grid-row-gap: 15px;
-	height: 65vh;
-}
-
-#name {
-	margin-top: -10px;
-	font-size: 50px;
-}
+/* HEADER */
 
 header {
-	height: 95vh;
+	width: 100vw;
+	height: 100vh;
+	padding: 1.5rem 1rem;
+	position: relative;
+	overflow: hidden;
+	background: var(--clrOffBlack);
+	color: var(--clrOffWhite);
+}
+
+header > * {
+	margin-top: 1.5rem;
+}
+
+h1,
+header h2,
+.cta {
+	position: relative;
+	top: 7%;
+}
+
+h1 span {
+	display: block;
+}
+
+/* override main.css h2 */
+header h2 {
+	font-size: 1.5rem;
+	text-align: start;
+	padding: 0;
+}
+
+/** CALL TO ACTION **/
+
+.cta {
+	display: flex;
+	align-items: center;
+}
+
+.cta a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: var(--clrPrimary);
+	font-size: 1.15rem;
+	font-weight: 500;
+}
+
+.cta a + a {
+	margin-left: 1rem;
+	padding: 0 1rem;
+}
+
+.cta .far {
+	margin-left: 0.5rem;
+	font-size: 1.15rem;
+}
+
+header svg {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	transform: translateY(var(--moveup));
+	font-weight: bold;
+}
+
+#design1 {
+	--moveup: -40%;
+}
+
+#design2 {
+	--moveup: -30%;
+}
+
+#design3 {
+	--moveup: -20%;
+}
+
+#design4 {
+	--moveup: -10%;
+}
+
+/* MAIN */
+
+main > section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	padding: var(--padSection);
 }
 
-#projects-card {
-	grid-row-start: 1;
-	grid-row-end: 2;
-	background-size: cover;
-	background-image: url('../images/index/blue-polygons2.jpg');
-	background-color: blue; /* fallback for image */
+/** PROJECTS **/
+
+.proj {
+	background: var(--clrOffBlack);
+	border-radius: 0 0 var(--radiusRound) var(--radiusRound);
+	width: 100%;
+	color: var(--clrOffWhite);
+	box-shadow: 5px 5px 17px 0 black;
 }
 
-#aboutme-card {
-	grid-row-start: 2;
-	grid-row-end: 3;
-	background-size: cover;
-	background-image: url('../images/index/red-polygons2.jpg');
-	background-color: yellow; /* fallback for image */
+.proj + .proj {
+	margin-top: 2.5rem;
 }
 
-#contact-card {
-	grid-row-start: 3;
-	grid-row-end: 4;
-	background-size: cover;
-	background-image: url('../images/index/green-polygons.jpg');
-	background-color: green; /* fallback for image */
+.proj h3 {
+	background: var(--clrOffBlack);
+	border: 7px solid black;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-image: linear-gradient(
+		to right,
+		var(--clrPrimary),
+		var(--clrDesign3),
+		var(--clrDesign5)
+	);
+	border-image-slice: 0 0 100% 0;
 }
 
-div {
+.proj a {
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--clrPrimary);
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.proj a .fas {
+	font-size: 0.9rem;
+}
+
+.proj img {
+	width: 100%;
+}
+
+.projInfo {
+	padding: 1rem;
+	line-height: 1.35;
+}
+
+.toolsUsed {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+}
+
+.toolsUsed p {
+	margin-top: 1rem;
+	padding: 0.25rem 0.75rem;
+	font-weight: bold;
+	border: 1px solid white;
+}
+
+.toolsUsed p + p {
+	margin-left: 1rem;
+}
+
+.toolsUsed .fab {
+	color: white;
+	font-weight: bold;
+	margin-left: 0.35rem;
+}
+
+/** ABOUT ME **/
+
+.me {
+	background: var(--clrOffBlack);
+	color: var(--clrOffWhite);
+}
+
+.slideshow {
+	display: flex;
+	flex-direction: column;
+	overflow-x: scroll;
+	scroll-snap-type: y mandatory;
+	width: 100%;
+}
+
+.slideshow figure {
+	flex: 100% 0 0;
+	scroll-snap-align: start;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-size: cover;
-	grid-column-start: 1;
-	grid-column-end: 2;
+	background: hsla(109, 0%, 90%, 0.05);
+	border-radius: var(--radiusRound);
+	padding: 1.5rem 1rem;
 }
 
-div h1 {
-	color: black;
+.slideshow figure + figure {
+	margin-top: 2rem;
 }
 
-div:hover h1 {
-	color: white;
+.slideshow figure:first-child {
+	padding: 0;
 }
 
-#name {
-	text-shadow: 1px 1px 1px #03d3fc;
-	width: auto;
-	overflow: hidden;
-	white-space: nowrap;
-	-margin: 0 auto;
-	margin-bottom: 2px;
-	animation: typing 1s steps(40, end);
+.slideshow figure:first-child figcaption {
+	padding: 1.5rem 1rem;
 }
 
-@keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 350px; /* width of name */
-	}
+.slideshow img {
+	width: 100%;
 }
+
+.hobbySlide .fas {
+	font-size: 5rem;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-color: var(--aboutmeiconBG);
+	background-image: linear-gradient(-25deg, var(--aboutmeiconBG), white);
+}
+
+.fas.fa-basketball-ball {
+	--aboutmeiconBG: var(--clrDesign2);
+}
+
+.fas.fa-campground {
+	--aboutmeiconBG: var(--clrDesign4);
+}
+
+.fas.fa-music {
+	--aboutmeiconBG: var(--clrDesign5);
+}
+
+.slideshow figcaption {
+	text-align: center;
+	padding: 1.5rem 0 0;
+	line-height: 1.35;
+}
+
+/** CONTACT **/
+
+.contact {
+	background: var(--clrOffWhite);
+	background-image: linear-gradient(
+		to bottom right,
+		var(--clrPrimary),
+		var(--clrDesign3),
+		var(--clrDesign5)
+	);
+}
+
+.contact h2 {
+	color: var(--clrOffBlack);
+}
+
+.contact form {
+	width: 100%;
+}
+
+.formInputGroup {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	background: var(--clrFormDivBG);
+	border-radius: var(--radiusRound);
+	border: var(--borderFormDiv);
+}
+
+.formInputGroup + .formInputGroup {
+	margin: 0.75rem 0;
+}
+
+.formInputGroup label,
+.formTextareaGroup label {
+	display: flex;
+	justify-content: center;
+	flex-basis: 25%;
+	padding: 0.5rem 0.75rem;
+	background: var(--clrFormDivBG);
+	border-radius: var(--radiusRound) 0 0 var(--radiusRound);
+	font-weight: bold;
+	color: hsl(211, 100%, 45%);
+}
+
+.formInputGroup input,
+.formTextareaGroup textarea {
+	flex-basis: 65%;
+	margin: 0 0 0 0.5rem;
+	background: transparent;
+	border: none;
+	font-family: Montserrat;
+}
+
+.formInputGroup input:hover,
+.formInputGroup input:focus {
+	outline: none;
+	border-bottom: 1px solid hsla(109, 0%, 90%, 1);
+}
+
+.formTextareaGroup {
+	background: var(--clrFormDivBG);
+	border: var(--borderFormDiv);
+	border-radius: var(--radiusRound);
+}
+
+.formTextareaGroup label {
+	display: block;
+	border-radius: var(--radiusRound) 0 0 0;
+}
+
+.formTextareaGroup textarea {
+	margin: 0.5rem 0 0 0.75rem;
+	width: 95%;
+}
+
+.formTextareaGroup textarea:hover,
+.formTextareaGroup textarea:focus {
+	outline: none;
+}
+
+.contact button {
+	display: block;
+	padding: 0.5rem 0.75rem;
+	margin: 0.75rem auto;
+	background: transparent;
+	border: 1px solid hsla(109, 0%, 90%, 1);
+	font-weight: bold;
+	font-size: 1.15rem;
+	font-family: Montserrat;
+	border-radius: var(--radiusRound);
+	background: var(--clrFormDivBG);
+	color: hsl(211, 100%, 45%);
+}
+
+/*********************** MEDIA QUERIES ***********************/

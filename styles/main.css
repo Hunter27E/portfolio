@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+:root {
+	--clrPrimary: hsl(211, 100%, 65%);
+	--clrDesign2: hsl(40, 83%, 66%);
+	--clrDesign3: hsl(350, 100%, 88%);
+	--clrDesign4: hsl(170, 53%, 43%);
+	--clrDesign5: hsl(0, 84%, 68%);
+	--clrOffBlack: #333;
+	--clrOffWhite: #dfdfdf;
+	--clrFormDivBG: hsla(109, 0%, 90%, 0.25);
+	--borderFormDiv: 1px solid hsla(109, 0%, 90%, 1);
+	--padSection: 3rem 1rem;
+	--radiusRound: 8px;
+	--fontH1: 3rem;
+	--fontH2: 2rem;
+	--fontH3: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Montserrat;
+	background: hsla(109, 0%, 23%, 1);
+	scroll-behavior: smooth;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+	font-weight: 900;
+	font-size: var(--fontH1);
+	color: var(--clrPrimary);
+}
+
+h2 {
+	font-size: var(--fontH2);
+	text-align: center;
+	padding-bottom: 3rem;
+	color: var(--clrOffWhite);
+}
+
+h3 {
+	color: var(--clrSecondary);
+	font-size: var(--fontH3);
+	padding: 1rem;
+}
