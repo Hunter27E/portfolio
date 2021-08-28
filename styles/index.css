@@ -100,6 +100,7 @@ main > section {
 	width: 100%;
 	color: var(--clrOffWhite);
 	box-shadow: 5px 5px 17px 0 black;
+	max-width: 50ch;
 }
 
 .proj + .proj {
@@ -180,6 +181,7 @@ main > section {
 	overflow-x: scroll;
 	scroll-snap-type: y mandatory;
 	width: 100%;
+	max-width: 50ch;
 }
 
 .slideshow figure {
@@ -223,7 +225,7 @@ main > section {
 	--aboutmeiconBG: var(--clrDesign2);
 }
 
-.fas.fa-campground {
+.fas.fa-hiking {
 	--aboutmeiconBG: var(--clrDesign4);
 }
 
@@ -255,6 +257,7 @@ main > section {
 
 .contact form {
 	width: 100%;
+	max-width: 50ch;
 }
 
 .formInputGroup {
@@ -333,3 +336,44 @@ main > section {
 }
 
 /*********************** MEDIA QUERIES ***********************/
+
+@media screen and (min-width: 550px) {
+	.formTextareaGroup label {
+		padding-left: 6%;
+	}
+
+	.formTextareaGroup textarea {
+		margin-left: 6%;
+		width: 90%;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	h1,
+	header h2,
+	.cta {
+		left: 5%;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 4rem;
+	}
+
+	.cta {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.proj,
+	.slideshow,
+	.contact form {
+		max-width: 55ch;
+	}
+}
