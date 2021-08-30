@@ -192,7 +192,7 @@ main > section {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: hsla(109, 0%, 90%, 0.05);
+	-background: hsla(109, 0%, 90%, 0.05);
 	border-radius: var(--radiusRound);
 	padding: 1.5rem 1rem;
 }
@@ -203,6 +203,7 @@ main > section {
 
 .slideshow figure:first-child {
 	padding: 0;
+	background: hsla(109, 0%, 90%, 0.05);
 }
 
 .slideshow figure:first-child figcaption {
