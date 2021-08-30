@@ -104,7 +104,8 @@ main > section {
 	max-width: 50ch;
 }
 
-.proj + .proj {
+.proj + .proj,
+.projGroup:last-child {
 	margin-top: 2.5rem;
 }
 
@@ -316,6 +317,7 @@ main > section {
 .formTextareaGroup textarea {
 	margin: 0.5rem 0 0 0.75rem;
 	width: 95%;
+	resize: none;
 }
 
 .formTextareaGroup textarea:hover,
@@ -369,6 +371,23 @@ main > section {
 
 	.cta {
 		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.projGroup {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.projGroup .proj {
+		margin: 0;
+	}
+
+	.projGroup .proj + .proj {
+		margin-left: 2.5rem;
 	}
 }
 
