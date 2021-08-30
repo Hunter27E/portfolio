@@ -46,6 +46,7 @@ header h2 {
 	color: var(--clrPrimary);
 	font-size: 1.15rem;
 	font-weight: 500;
+	z-index: 1; /* otherwise hidden by svg on desktop */
 }
 
 .cta a + a {
