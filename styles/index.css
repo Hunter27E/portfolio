@@ -29,6 +29,8 @@ h1,
 	position: relative;
 	top: 7%;
 	z-index: 1;
+	transform: translateX(-125%);
+	animation: tagSlide 1s ease-in-out forwards 50ms;
 }
 
 h1 {
@@ -50,6 +52,8 @@ header h2 {
 	color: var(--clrOffBlack);
 	font-size: 1.15rem;
 	font-weight: bold;
+	transform: translateX(100%);
+	animation: tagSlide 1s ease-in-out forwards 100ms;
 }
 
 header h2::before {
@@ -63,6 +67,12 @@ header h2::before {
 	border-top: 1.105em solid var(--clrTagBG);
 	border-bottom: 1.15em solid var(--clrTagBG);
 	border-left: 1.5em solid transparent;
+}
+
+@keyframes tagSlide {
+	to {
+		transform: translateX(0);
+	}
 }
 
 /** CALL TO ACTION **/
