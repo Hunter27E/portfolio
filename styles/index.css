@@ -6,7 +6,11 @@ header {
 	padding: 1.5rem 1rem;
 	position: relative;
 	overflow: hidden;
-	background: var(--clrOffBlack);
+	background: var(--clrOffBlack) url(../images/forest-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: screen;
+	background-attachment: fixed;
 	color: var(--clrOffWhite);
 }
 
@@ -15,21 +19,43 @@ header > * {
 }
 
 h1,
-header h2,
 .cta {
 	position: relative;
 	top: 7%;
+	z-index: 1;
+}
+
+h1 {
+	width: max-content;
 }
 
 h1 span {
 	display: block;
 }
 
-/* override main.css h2 */
 header h2 {
-	font-size: 1.5rem;
-	text-align: start;
-	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: max-content;
+	padding: 0.5em 1.5em 0.5em 1.5em;
+	background: var(--clrTagBG);
+	color: var(--clrOffBlack);
+	font-size: 1.15rem;
+	font-weight: bold;
+}
+
+header h2::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+	width: 0;
+	height: 0;
+	border-top: 1.105em solid var(--clrTagBG);
+	border-bottom: 1.15em solid var(--clrTagBG);
+	border-left: 1.5em solid transparent;
 }
 
 /** CALL TO ACTION **/
@@ -43,7 +69,7 @@ header h2 {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	color: var(--clrPrimary);
+	color: var(--clrOffBlack);
 	font-size: 1.15rem;
 	font-weight: 500;
 	z-index: 1; /* otherwise hidden by svg on desktop */
@@ -57,31 +83,6 @@ header h2 {
 .cta .far {
 	margin-left: 0.5rem;
 	font-size: 1.15rem;
-}
-
-header svg {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	transform: translateY(var(--moveup));
-	font-weight: bold;
-}
-
-#design1 {
-	--moveup: -40%;
-}
-
-#design2 {
-	--moveup: -30%;
-}
-
-#design3 {
-	--moveup: -20%;
-}
-
-#design4 {
-	--moveup: -10%;
 }
 
 /* MAIN */
@@ -115,12 +116,7 @@ main > section {
 	border-left: none;
 	border-right: none;
 	border-top: none;
-	border-image: linear-gradient(
-		to right,
-		var(--clrPrimary),
-		var(--clrDesign3),
-		var(--clrDesign5)
-	);
+	border-image: linear-gradient(to right, var(--clrPrimary), var(--clrTagBG));
 	border-image-slice: 0 0 100% 0;
 }
 
@@ -193,8 +189,8 @@ main > section {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	-background: hsla(109, 0%, 90%, 0.05);
 	border-radius: var(--radiusRound);
+	background: hsla(109, 0%, 90%, 0.05);
 	padding: 1.5rem 1rem;
 }
 
@@ -204,7 +200,6 @@ main > section {
 
 .slideshow figure:first-child {
 	padding: 0;
-	background: hsla(109, 0%, 90%, 0.05);
 }
 
 .slideshow figure:first-child figcaption {
@@ -224,15 +219,15 @@ main > section {
 	background-image: linear-gradient(-25deg, var(--aboutmeiconBG), white);
 }
 
-.fas.fa-basketball-ball {
+.hobbySlide .fas.fa-basketball-ball {
 	--aboutmeiconBG: var(--clrDesign2);
 }
 
-.fas.fa-hiking {
+.hobbySlide .fas.fa-hiking {
 	--aboutmeiconBG: var(--clrDesign4);
 }
 
-.fas.fa-music {
+.hobbySlide .fas.fa-music {
 	--aboutmeiconBG: var(--clrDesign5);
 }
 
@@ -249,8 +244,7 @@ main > section {
 	background-image: linear-gradient(
 		to bottom right,
 		var(--clrPrimary),
-		var(--clrDesign3),
-		var(--clrDesign5)
+		var(--clrTagBG)
 	);
 }
 
@@ -354,7 +348,6 @@ main > section {
 
 @media screen and (min-width: 600px) {
 	h1,
-	header h2,
 	.cta {
 		left: 5%;
 	}
@@ -365,12 +358,16 @@ main > section {
 		font-size: 5rem;
 	}
 
+	header h2 {
+		font-size: 1.5rem;
+	}
+
 	h2 {
 		font-size: 4rem;
 	}
 
-	.cta {
-		font-size: 2rem;
+	.cta a {
+		font-size: 1.5rem;
 	}
 }
 

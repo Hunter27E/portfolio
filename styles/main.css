@@ -9,6 +9,7 @@
 	--clrOffBlack: #333;
 	--clrOffWhite: #dfdfdf;
 	--clrFormDivBG: hsla(109, 0%, 90%, 0.25);
+	--clrTagBG: hsl(181, 100%, 65%);
 	--borderFormDiv: 1px solid hsla(109, 0%, 90%, 1);
 	--padSection: 3rem 1rem;
 	--radiusRound: 8px;
