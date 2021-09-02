@@ -9,13 +9,14 @@ header {
 	background: var(--clrOffBlack) url(../images/forest-bg.jpg);
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
 	background-blend-mode: screen;
 	color: var(--clrOffWhite);
 }
 
-@supports (background-attachment: fixed) {
+@supports (-webkit-overflow-scrolling: touch) {
 	header {
-		background-attachment: fixed;
+		background-attachment: scroll;
 	}
 }
 
@@ -32,6 +33,7 @@ h1,
 
 h1 {
 	width: max-content;
+	color: var(--clrPrimary);
 }
 
 h1 span {
