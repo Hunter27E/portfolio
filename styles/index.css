@@ -10,8 +10,13 @@ header {
 	background-size: cover;
 	background-position: center;
 	background-blend-mode: screen;
-	background-attachment: fixed;
 	color: var(--clrOffWhite);
+}
+
+@supports (background-attachment: fixed) {
+	header {
+		background-attachment: fixed;
+	}
 }
 
 header > * {
