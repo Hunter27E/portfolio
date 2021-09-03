@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 :root {
 	--clrPrimary: hsl(211, 100%, 65%);
@@ -13,9 +15,12 @@
 	--borderFormDiv: 1px solid hsla(109, 0%, 90%, 1);
 	--padSection: 3rem 1rem;
 	--radiusRound: 8px;
-	--fontH1: 3rem;
-	--fontH2: 2rem;
+	--fontH1: 4.5rem;
+	--fontH2: 3.5rem;
 	--fontH3: 1.5rem;
+	--fontPgraph: 1.5rem;
+	--fontFamPrime: Montserrat;
+	--fontFamSnd: 'Nanum Pen Script';
 }
 
 *,
@@ -27,7 +32,7 @@
 }
 
 html {
-	font-family: Montserrat;
+	font-family: var(--fontFamPrime);
 	background: hsla(109, 0%, 23%, 1);
 	scroll-behavior: smooth;
 }
@@ -38,6 +43,7 @@ h1 {
 	font-weight: 900;
 	font-size: var(--fontH1);
 	color: var(--clrPrimary);
+	font-family: var(--fontFamSnd);
 }
 
 h2 {
@@ -45,6 +51,7 @@ h2 {
 	text-align: center;
 	padding-bottom: 3rem;
 	color: var(--clrOffWhite);
+	font-family: var(--fontFamSnd);
 }
 
 h3 {
