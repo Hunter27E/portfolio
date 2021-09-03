@@ -302,6 +302,7 @@ main > section {
 	border-radius: var(--radiusRound);
 	border: var(--borderFormDiv);
 	transition: box-shadow 250ms linear;
+	overflow: hidden;
 }
 
 .formInputGroup + .formInputGroup {
