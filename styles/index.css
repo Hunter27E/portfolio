@@ -301,10 +301,17 @@ main > section {
 	background: var(--clrFormDivBG);
 	border-radius: var(--radiusRound);
 	border: var(--borderFormDiv);
+	overflow: hidden;
+	transition: box-shadow 250ms linear;
 }
 
 .formInputGroup + .formInputGroup {
 	margin: 0.75rem 0;
+}
+
+.formInputGroup:hover,
+.formTextareaGroup:hover {
+	box-shadow: 0 0 10px 0 var(--clrOffBlack);
 }
 
 .formInputGroup label,
@@ -321,14 +328,14 @@ main > section {
 
 .formInputGroup input,
 .formTextareaGroup textarea {
-	flex-basis: 65%;
+	flex-basis: 55%;
 	margin: 0 0 0 0.5rem;
 	background: transparent;
 	border: none;
 	font-family: var(--fontFamSnd);
+	font-size: 1.25rem;
 }
 
-.formInputGroup input:hover,
 .formInputGroup input:focus {
 	outline: none;
 	border-bottom: 1px solid hsla(109, 0%, 90%, 1);
@@ -338,6 +345,7 @@ main > section {
 	background: var(--clrFormDivBG);
 	border: var(--borderFormDiv);
 	border-radius: var(--radiusRound);
+	transition: box-shadow 250ms linear;
 }
 
 .formTextareaGroup label {
@@ -360,7 +368,7 @@ main > section {
 	display: block;
 	padding: 0.5rem 0.75rem;
 	margin: 0.75rem auto;
-	background: transparent;
+	background: hsla(195, 82%, 76%, 1);
 	border: 1px solid hsla(109, 0%, 90%, 1);
 	font-weight: bold;
 	font-size: 1.15rem;
