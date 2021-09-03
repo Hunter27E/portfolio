@@ -244,7 +244,7 @@ main > section {
 .slideshow figcaption {
 	text-align: center;
 	padding: 1.5rem 0 0;
-	line-height: 1.35;
+	line-height: 1.25;
 	font-family: var(--fontFamSnd);
 	font-size: var(--fontPgraph);
 }
@@ -301,7 +301,6 @@ main > section {
 	background: var(--clrFormDivBG);
 	border-radius: var(--radiusRound);
 	border: var(--borderFormDiv);
-	overflow: hidden;
 	transition: box-shadow 250ms linear;
 }
 
@@ -328,7 +327,8 @@ main > section {
 
 .formInputGroup input,
 .formTextareaGroup textarea {
-	flex-basis: 55%;
+	overflow-x: scroll;
+	flex-basis: 70%;
 	margin: 0 0 0 0.5rem;
 	background: transparent;
 	border: none;
