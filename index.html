@@ -8,13 +8,19 @@
 		/>
 		<meta http-equiv="Cache-Control" content="no-cache" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
-		<link rel="stylesheet" href="styles/main.css?v=sep2x2" />
-		<link rel="stylesheet" href="styles/index.css?v=sep3x3" />
+		<link rel="stylesheet" href="styles/main.css?v=16Feb22" />
+		<link rel="stylesheet" href="styles/header.css?v=16Feb22" />
+		<link rel="stylesheet" href="styles/experience.css?16Feb22" />
+		<link rel="stylesheet" href="styles/aboutme.css?16Feb22" />
+		<link rel="stylesheet" href="styles/contact.css?16Feb22" />
 		<!-- Font Awesome -->
 		<script
 			src="https://kit.fontawesome.com/8394acfd01.js"
 			crossorigin="anonymous"
 		></script>
+		<!-- end Font Awesome -->
+		<script src="scripts/observer.js"></script>
+		<script src="scripts/form.js" defer></script>
 		<title>Hunter E | Frontend Dev</title>
 	</head>
 	<body>
@@ -22,103 +28,124 @@
 			<h1><span>Hi,</span>I'm Hunter.</h1>
 			<h2>FRONTEND DEVELOPER</h2>
 			<section class="cta">
-				<a href="#projects">Projects <i class="far fa-folder"></i></a>
-				<a href="#contact">Contact <i class="far fa-address-book"></i></a>
+				<a href="#exp"
+					>Experience <i class="far fa-regular fa-folder-open"></i
+				></a>
+				<!-- <a href="#exp">Experience <i class="far fa-folder"></i></a> -->
+				<!-- <a href="#contact">Contact <i class="far fa-address-book"></i></a> -->
+				<a href="#contact"
+					>Contact <i class="far fa-regular fa-id-badge"></i
+				></a>
 			</section>
 		</header>
 		<main>
-			<section class="projects" id="projects">
-				<h2>Projects</h2>
-				<section class="projGroup">
-					<article class="proj">
-						<h3>
-							<a href="http://vcr-app.herokuapp.com"
-								>Virtual Cinema Records<i class="fas fa-external-link-alt"></i
-							></a>
-						</h3>
-						<img src="images/vcr.png" alt="Virtual Cinema Records" />
-						<section class="projInfo">
-							<p>
-								VCR is a web app for movie enthusiasts. Find, rate, and save any
-								movie. Once VCR has learned your genre, actor, and movie type
-								preferences, get recommended new movies to binge watch on your
-								next Friday night in. And even better - VCR will tell you where
-								you can stream that movie right away!
-							</p>
-							<div class="toolsUsed">
-								<p>React<i class="fab fa-react"></i></p>
-								<p>CSS<i class="fab fa-css3"></i></p>
-							</div>
-						</section>
-					</article>
-					<article class="proj">
-						<h3>
-							<a href="https://www.bolancontemporaryart.com"
-								>Bolan Contemporary Art Museum<i
-									class="fas fa-external-link-alt"
-								></i
-							></a>
-						</h3>
-						<img src="images/bolancam.png" alt="Bolan Museum Website" />
-						<section class="projInfo">
-							<p>
-								Website launched alongside the grand opening of the Bolan
-								Contemporary Art Museum in Bolan, Iowa. A non-profit
-								organization-led art contest and showcasing. Check it out and
-								spread the word!
-							</p>
-							<div class="toolsUsed">
-								<p>HTML<i class="fab fa-html5"></i></p>
-								<p>CSS<i class="fab fa-css3"></i></p>
-								<p>JS<i class="fab fa-js-square"></i></p>
-							</div>
-						</section>
-					</article>
-				</section>
-				<section class="projGroup">
-					<article class="proj">
-						<h3>
-							<a href="https://aftermatch.me"
-								>Aftermatch<i class="fas fa-external-link-alt"></i
-							></a>
-						</h3>
-						<img src="images/aftermatch.png" alt="Aftermatch Website" />
-						<section class="projInfo">
-							<p>
-								Website serving as the face for a new and upcoming dating app
-								that isn't like the rest. Get all the information you need about
-								Aftermatch here.
-							</p>
-							<div class="toolsUsed">
-								<p>HTML<i class="fab fa-html5"></i></p>
-								<p>CSS<i class="fab fa-css3"></i></p>
-								<p>JS<i class="fab fa-js-square"></i></p>
-							</div>
-						</section>
-					</article>
-					<article class="proj">
-						<h3><a href="">AR Museum</a></h3>
-						<img src="images/arm.png" alt="AR Museum Web App" />
-						<section class="projInfo">
-							<p>
-								A museum-goer companion app. This web app is meant to supplement
-								what you learn at a museum or the zoo in an interactive and fun
-								way. Get 3d models of the exhibits during your visit and enjoy
-								learning about what you're seeing!
-							</p>
-							<div class="toolsUsed">
-								<p>Node<i class="fab fa-node-js"></i></p>
-								<p>CSS<i class="fab fa-css3"></i></p>
-								<p>Figma<i class="fab fa-figma"></i></p>
-							</div>
-						</section>
-					</article>
-				</section>
+			<section id="exp">
+				<h2>Experience</h2>
+				<article id="vcr-card" class="exp-card">
+					<div class="exp-card__title">
+						<h3>Virtual Cinema Records</h3>
+						<a href="https://vcr-app.herokuapp.com">
+							<i class="fa-solid fa-square-arrow-up-right"></i>
+						</a>
+					</div>
+					<div class="exp-card__pics">
+						<img src="images/vcr-home.png" alt="" />
+						<img src="images/vcr-movie.png" alt="" />
+						<img src="images/vcr-recs.png" alt="" />
+					</div>
+					<ul class="exp-card__tools">
+						<li class="react-marker brand-marker"><span>React</span></li>
+						<li class="css-marker brand-marker"><span>CSS</span></li>
+						<li class="scrum-marker free-marker"><span>Scrum</span></li>
+					</ul>
+					<p class="exp-card__desc">
+						VCR is a web app for movie enthusiasts.
+						<span class="line-break"></span> Find, rate, and save any movie.
+						Once VCR has learned your genre, actor, and movie type preferences,
+						get recommended new movies to binge watch on your next Friday night
+						in.
+						<span class="line-break"></span>
+						And even better - VCR will tell you where you can stream that movie
+						right away!
+					</p>
+				</article>
+				<article id="ivk-card" class="exp-card">
+					<div class="exp-card__title">
+						<h3>.IVK LLC</h3>
+						<a href="https://ivkcollection.com">
+							<i class="fa-solid fa-square-arrow-up-right"></i>
+						</a>
+					</div>
+					<div class="exp-card__pics">
+						<img src="images/ivk-home.png" alt="" />
+						<img src="images/ivk-products.png" alt="" />
+						<img src="images/ivk-journals.png" alt="" />
+					</div>
+					<ul class="exp-card__tools">
+						<li class="node-marker brand-marker"><span>Node JS</span></li>
+						<li class="sass-marker brand-marker"><span>Sass</span></li>
+						<li class="mongo-marker free-marker"><span>Mongo DB</span></li>
+					</ul>
+					<p class="exp-card__desc">
+						Freelance web development gig - a marketing website for a vitamin
+						supplement start-up company. Serves as a landing site for the
+						company and prospective customers.
+					</p>
+				</article>
+				<article id="bolan-card" class="exp-card">
+					<div class="exp-card__title">
+						<h3>Bolan Contemporary Art</h3>
+						<a href="https://www.bolancontemporaryart.com">
+							<i class="fa-solid fa-square-arrow-up-right"></i>
+						</a>
+					</div>
+					<div class="exp-card__pics">
+						<img src="images/bolan-home.png" alt="" />
+						<img src="images/bolan-jury.png" alt="" />
+						<img src="images/bolan-contest.png" alt="" />
+					</div>
+					<ul class="exp-card__tools">
+						<li class="html-marker brand-marker"><span>HTML</span></li>
+						<li class="css-marker brand-marker"><span>CSS</span></li>
+						<li class="js-marker brand-marker"><span>JS</span></li>
+					</ul>
+					<p class="exp-card__desc">
+						Website launched alongside the grand opening of the Bolan
+						Contemporary Art Museum in Bolan, Iowa. A non-profit
+						organization-led art contest and showcasing.
+						<span class="line-break"></span>
+						Check it out and spread the word!
+					</p>
+				</article>
+				<article id="arm-card" class="exp-card">
+					<div class="exp-card__title">
+						<h3>AR Museum</h3>
+						<!-- <a href="https://vcr-app.herokuapp.com">
+							<i class="fa-solid fa-square-arrow-up-right"></i>
+						</a> -->
+					</div>
+					<div class="exp-card__pics">
+						<img src="images/arm-home.png" alt="" />
+						<img src="images/arm-home.png" alt="" />
+					</div>
+					<ul class="exp-card__tools">
+						<li class="node-marker brand-marker"><span>Node JS</span></li>
+						<li class="css-marker brand-marker"><span>CSS</span></li>
+						<li class="figma-marker brand-marker"><span>Figma</span></li>
+					</ul>
+					<p class="exp-card__desc">
+						A museum-goer companion app. This web app is meant to supplement
+						what you learn at a museum or the zoo in an interactive and fun way.
+						<span class="line-break"></span>
+						Get 3d models of the exhibits during your visit and enjoy learning
+						about what you're seeing!
+					</p>
+				</article>
 			</section>
-			<section class="me">
+			<section id="me">
 				<h2>About Me</h2>
-				<section class="slideshow">
-					<figure>
+				<section id="me-slideshow">
+					<figure class="slide">
 						<img src="images/me-bixby.jpg" alt="Me at Bixby Bridge" />
 						<figcaption>
 							Hi! I'm Hunter Estrada, a senior at UC San Diego majoring in
@@ -129,50 +156,49 @@
 							the eye!
 						</figcaption>
 					</figure>
-					<figure class="hobbySlide">
+					<figure class="slide hobby-slide">
 						<i class="fas fa-basketball-ball"></i>
 						<figcaption>
-							Ball. Is. Life. Been playing since I was a little kid and haven't
-							stopped since. I always make sure to represent my Los Angeles
-							Lakers too, of course. Love that purple and gold.
+							Grew up playing basketball and still do. Huge Lakers fan, always
+							got to support my Purple & Gold.
 						</figcaption>
 					</figure>
-					<figure class="hobbySlide">
+					<figure class="slide hobby-slide">
 						<i class="fas fa-hiking"></i>
 						<figcaption>
-							There's no cure like the outdoors. I've been lucky enough to be
-							able to experience it a whole lot in my first 21 years. Trekking
-							down the Grand Canyon, bouldering in Joshua Tree, and traversing
-							The Narrows in Zion are some of the highlights of my life. 15
-							national parks visited and many more to go!
+							There's no cure like the outdoors, and I've been lucky to
+							experience it a whole lot in my life. Reach out if you want any
+							trip recommendations! Many of my favorite memories have come in
+							awesome places like Joshua Tree, Yosemite, and Zion. 15 national
+							parks visited and many more to go!
 						</figcaption>
 					</figure>
-					<figure class="hobbySlide">
+					<figure class="slide hobby-slide">
 						<i class="fas fa-music"></i>
 						<figcaption>
-							Big fan of alternative rock and rap but I like to listen to a
-							range of stuff. Shoutout Pearl Jam, Young the Giant, and Kendrick
-							Lamar.
+							I listen to a lot of alternative and indie rock but also a big fan
+							of rap. Pearl Jam, Milky Chance, and Kendrick Lamar are a few of
+							my favorites.
 						</figcaption>
 					</figure>
 				</section>
 			</section>
-			<section class="contact" id="contact">
+			<section id="contact">
 				<h2>Contact Me</h2>
 				<form action="https://formspree.io/f/mwkwdodq" method="POST">
-					<div class="formInputGroup">
+					<div class="contact-input-group">
 						<label for="name">Name</label
 						><input id="name" name="name" type="text" required />
 					</div>
-					<div class="formInputGroup">
+					<div class="contact-input-group">
 						<label for="email">Email</label
 						><input id="email" name="email" type="email" required />
 					</div>
-					<div class="formInputGroup">
+					<div class="contact-input-group">
 						<label for="phone">Phone </label
 						><input id="phone" name="phone" type="tel" placeholder="optional" />
 					</div>
-					<div class="formTextareaGroup">
+					<div class="contact-textarea-group">
 						<label for="">Message</label
 						><textarea
 							name=""

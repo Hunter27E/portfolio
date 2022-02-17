@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
 	// get form and title of form
-	var formTitle = document.querySelector('.contact h2');
-	var form = document.querySelector('.contact form');
+	var formTitle = document.querySelector('#contact h2');
+	var form = document.querySelector('#contact form');
 
 	// Success and Error functions for after the form is submitted
 	function success() {

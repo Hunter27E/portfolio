@@ -1,0 +1,164 @@
+#exp {
+	padding: var(--padding-section);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.exp-card {
+	position: relative;
+	max-width: 1250px;
+	margin: 0 auto;
+	padding-left: 1rem;
+}
+.exp-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1rem;
+	height: 100%;
+	background: linear-gradient(
+		to bottom,
+		transparent,
+		var(--clr-exp-primary),
+		transparent
+	);
+}
+
+.exp-card + .exp-card {
+	margin-top: 2rem;
+}
+
+.exp-card > * {
+	padding: var(--padding-exp);
+}
+
+#vcr-card {
+	--clr-exp-primary: hsla(175, 62%, 55%, 1);
+}
+#bolan-card {
+	--clr-exp-primary: hsla(354, 64%, 75%, 1);
+}
+#arm-card {
+	--clr-exp-primary: hsla(120, 0%, 100%, 1);
+}
+#ivk-card {
+	--clr-exp-primary: hsla(28, 55%, 78%, 1);
+}
+
+.exp-card__title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--clr-exp-primary);
+}
+
+.exp-card__title a {
+	color: inherit;
+}
+
+.exp-card__pics {
+	display: flex;
+	gap: calc(var(--padding-exp) / 2);
+	padding: 0;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+}
+.exp-card__pics::-webkit-scrollbar {
+	height: 0.5rem;
+}
+.exp-card__pics::-webkit-scrollbar-track {
+	margin: 0 0.5rem;
+	background: var(--clr-off-black);
+	border-radius: 100vw;
+}
+.exp-card__pics::-webkit-scrollbar-thumb {
+	background: var(--clr-exp-primary);
+	border-radius: 100vw;
+}
+
+.exp-card__pics img {
+	width: 92%;
+	max-width: 500px;
+	flex-shrink: 0;
+	object-fit: cover;
+	object-position: center;
+	scroll-snap-align: start;
+}
+
+.exp-card__tools {
+	display: flex;
+	gap: calc(var(--padding-exp) * 2);
+	list-style-position: inside;
+	background: var(--clr-exp-card-tools-bg);
+	font-size: 0.85em;
+	font-weight: 700;
+}
+
+.exp-card__tools li {
+	color: var(--clr-off-white);
+	list-style-type: '\2713';
+}
+
+.brand-marker::marker {
+	font-family: 'Font Awesome 5 Brands';
+}
+
+.free-marker::marker {
+	font-family: 'Font Awesome 5 Free';
+}
+
+.css-marker::marker {
+	content: '\f13c';
+	color: hsl(205, 80%, 38%);
+}
+.figma-marker::marker {
+	content: '\f799';
+	color: hsla(266, 85%, 64%, 1);
+}
+.html-marker::marker {
+	content: '\f13b';
+	color: hsla(18, 79%, 53%, 1);
+}
+.js-marker::marker {
+	content: '\f3b8';
+	color: hsla(53, 84%, 52%, 1);
+}
+.mongo-marker::marker {
+	content: '\f06c';
+	color: hsl(132, 59%, 39%);
+}
+.node-marker::marker {
+	content: '\f3d3';
+	color: hsla(87, 66%, 46%, 1);
+}
+.react-marker::marker {
+	content: '\f41b';
+	color: hsl(193, 95%, 68%);
+}
+.sass-marker::marker {
+	content: '\f41e';
+	color: hsla(330, 44%, 57%, 1);
+}
+.scrum-marker::marker {
+	content: '\e068';
+	color: hsl(60, 81%, 75%);
+}
+
+.exp-card__tools li span {
+	padding-left: calc(var(--padding-exp) / 2);
+}
+
+.exp-card__desc {
+	max-width: 75ch;
+	line-height: 1.6;
+	font-size: 0.85em;
+	color: var(--clr-off-white);
+}
+
+@media screen and (min-width: 600px) {
+	.exp-card__title {
+		justify-content: flex-start;
+		gap: 1em;
+	}
+}
