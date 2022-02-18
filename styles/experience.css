@@ -9,6 +9,8 @@
 	max-width: 1250px;
 	margin: 0 auto;
 	padding-left: 1rem;
+	opacity: 0;
+	transition: opacity var(--show-duration) var(--show-timing);
 }
 .exp-card::before {
 	content: '';
@@ -23,6 +25,10 @@
 		var(--clr-exp-primary),
 		transparent
 	);
+}
+
+.exp-card.show {
+	opacity: 1;
 }
 
 .exp-card + .exp-card {
@@ -89,64 +95,44 @@
 .exp-card__tools {
 	display: flex;
 	gap: calc(var(--padding-exp) * 2);
-	list-style-position: inside;
+	list-style-type: none;
 	background: var(--clr-exp-card-tools-bg);
+	color: var(--clr-off-white);
 	font-size: 0.85em;
 	font-weight: 700;
 }
 
-.exp-card__tools li {
-	color: var(--clr-off-white);
-	list-style-type: '\2713';
+.exp-card__tools i {
+	margin-right: calc(var(--padding-exp) / 2);
 }
 
-.brand-marker::marker {
-	font-family: 'Font Awesome 5 Brands';
-}
-
-.free-marker::marker {
-	font-family: 'Font Awesome 5 Free';
-}
-
-.css-marker::marker {
-	content: '\f13c';
+.fa-css3 {
 	color: hsl(205, 80%, 38%);
 }
-.figma-marker::marker {
-	content: '\f799';
+.fa-figma {
 	color: hsla(266, 85%, 64%, 1);
 }
-.html-marker::marker {
-	content: '\f13b';
+.fa-html5 {
 	color: hsla(18, 79%, 53%, 1);
 }
-.js-marker::marker {
-	content: '\f3b8';
+.fa-js {
 	color: hsla(53, 84%, 52%, 1);
 }
-.mongo-marker::marker {
-	content: '\f06c';
+.fa-leaf {
 	color: hsl(132, 59%, 39%);
 }
-.node-marker::marker {
-	content: '\f3d3';
+.fa-node-js {
 	color: hsla(87, 66%, 46%, 1);
 }
-.react-marker::marker {
-	content: '\f41b';
+.fa-react {
 	color: hsl(193, 95%, 68%);
 }
-.sass-marker::marker {
-	content: '\f41e';
+.fa-sass {
 	color: hsla(330, 44%, 57%, 1);
 }
-.scrum-marker::marker {
+.fa-people-arrows-left-right {
 	content: '\e068';
 	color: hsl(60, 81%, 75%);
-}
-
-.exp-card__tools li span {
-	padding-left: calc(var(--padding-exp) / 2);
 }
 
 .exp-card__desc {

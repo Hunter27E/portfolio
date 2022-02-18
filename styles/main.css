@@ -35,6 +35,10 @@
 	/* font family */
 	--ff-primary: Montserrat;
 	--ff-secondary: 'Nanum Pen Script';
+
+	/* show animation (intersection observer) */
+	--show-duration: 0.5s;
+	--show-timing: ease-in-out;
 }
 
 /* DEFAULT RESETS */

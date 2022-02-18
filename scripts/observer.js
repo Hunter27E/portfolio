@@ -1,6 +1,6 @@
 function init() {
 	/* Project Cards & Aboout Me Slides intersection observer */
-	let elems = document.querySelectorAll('.proj, .slide');
+	let elems = document.querySelectorAll('.exp-card, .slide');
 	let show_observer = new IntersectionObserver(
 		function (entries, observer) {
 			entries.forEach((entry) => {
