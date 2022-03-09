@@ -1,0 +1,82 @@
+/* UTILITY classes should be thought of as "adjustor/modifier" classes */
+
+@use 'master' as *;
+
+/* COLORS */
+
+.clr-placeholder {
+	color: $clr-placeholder;
+}
+
+.clr-complement-dark {
+	color: $clr-complement-dark;
+}
+
+.clr-complement-light {
+	color: $clr-complement-light;
+}
+
+.clr-accent-neon {
+	color: $clr-accent-neon;
+}
+
+.clr-accent {
+	color: $clr-accent;
+}
+
+/* FONT SIZES */
+
+.fs-x05 {
+	font-size: 0.5em;
+}
+
+.fs-x075 {
+	font-size: 0.75em;
+}
+
+.fs-x125 {
+	font-size: 1.25em;
+}
+
+.fs-x15 {
+	font-size: 1.5em;
+}
+
+.fs-x2 {
+	font-size: 2em;
+}
+
+/* LAYOUT */
+
+.display-block {
+	display: block;
+}
+
+/* HEADINGS */
+
+.box-heading {
+	padding: 0.5em 1em;
+	width: max-content;
+	background: $clr-complement-dark;
+	font-weight: $fw-bold;
+}
+
+/* BUTTONS */
+
+.cta-btn {
+	display: block;
+	width: max-content;
+	padding: $padding-elem;
+	border: 7px inset rgb($clr-accent-neon, 0.5);
+	border-radius: 1em;
+	text-decoration: none;
+	font-weight: $fw-bold;
+	color: $clr-complement-dark;
+	background: $clr-accent;
+	box-shadow: $bs-element-2;
+	transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out;
+}
+.cta-btn:hover {
+	box-shadow: $bs-element;
+	transform: scale(1.1);
+}

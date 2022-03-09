@@ -1,0 +1,73 @@
+@use 'master' as *;
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	padding: 3vh 3vw;
+	background: $clr-complement-dark;
+	background: rgb($clr-complement-dark, 1);
+	box-shadow: $bs-element-2;
+}
+
+#header-btns {
+	flex-grow: 0;
+	display: flex;
+	align-items: center;
+	gap: $padding-elem;
+	width: max-content;
+
+	i {
+		font-size: $fs-l;
+	}
+
+	img {
+		width: clamp(50px, 10vw, 100px);
+	}
+}
+
+#menu {
+	overflow: hidden;
+	position: fixed;
+	inset: 0;
+	background: rgb($clr-primary, 0.9);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 100ms ease-in-out;
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: $gap-flex;
+		list-style-type: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50vw;
+		height: 100vh;
+		max-width: 400px;
+		background: $clr-primary;
+		background-size: cover;
+	}
+
+	.fa-circle-xmark {
+		position: absolute;
+		top: $padding-layout-block;
+		right: $padding-layout-inline;
+		z-index: 1;
+		font-size: $fs-l;
+	}
+
+	a {
+		font-size: $fs-ml;
+	}
+}
+
+#menu.open {
+	transform: scaleX(1);
+}

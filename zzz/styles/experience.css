@@ -1,0 +1,146 @@
+#exp {
+	padding: var(--padding-section);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.exp-card {
+	position: relative;
+	max-width: 1250px;
+	margin: 0 auto;
+	padding-left: 1rem;
+	opacity: 0;
+	transition: opacity var(--show-duration) var(--show-timing);
+}
+.exp-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1rem;
+	height: 100%;
+	background: linear-gradient(
+		to bottom,
+		transparent,
+		var(--clr-exp-primary),
+		transparent
+	);
+}
+
+.exp-card.show {
+	opacity: 1;
+}
+
+.exp-card + .exp-card {
+	margin-top: 2rem;
+}
+
+.exp-card > * {
+	padding: var(--padding-exp);
+}
+
+#vcr-card {
+	--clr-exp-primary: hsla(175, 62%, 55%, 1);
+}
+#bolan-card {
+	--clr-exp-primary: hsla(354, 64%, 75%, 1);
+}
+#arm-card {
+	--clr-exp-primary: hsla(120, 0%, 100%, 1);
+}
+#ivk-card {
+	--clr-exp-primary: hsla(28, 55%, 78%, 1);
+}
+
+.exp-card__title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--clr-exp-primary);
+}
+
+.exp-card__title a {
+	color: inherit;
+}
+.exp-card__title a:first-child {
+	text-decoration: none;
+}
+.exp-card__title a:first-child:hover {
+	text-decoration: underline;
+}
+.exp-card__title a:last-child {
+}
+
+.exp-card__pics {
+	display: flex;
+	gap: calc(var(--padding-exp) / 2);
+	padding: 0;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+}
+
+.exp-card__pics img {
+	width: 92%;
+	max-width: 500px;
+	flex-shrink: 0;
+	object-fit: cover;
+	object-position: center;
+	scroll-snap-align: start;
+}
+
+.exp-card__tools {
+	display: flex;
+	gap: calc(var(--padding-exp) * 2);
+	list-style-type: none;
+	background: var(--clr-exp-card-tools-bg);
+	color: var(--clr-off-white);
+	font-size: 0.9em;
+	font-weight: 700;
+}
+
+.exp-card__tools i {
+	margin-right: calc(var(--padding-exp) / 2);
+}
+
+.fa-css3 {
+	color: hsl(205, 80%, 38%);
+}
+.fa-figma {
+	color: hsla(266, 85%, 64%, 1);
+}
+.fa-html5 {
+	color: hsla(18, 79%, 53%, 1);
+}
+.fa-js {
+	color: hsla(53, 84%, 52%, 1);
+}
+.fa-leaf {
+	color: hsl(132, 59%, 39%);
+}
+.fa-node-js {
+	color: hsla(87, 66%, 46%, 1);
+}
+.fa-react {
+	color: hsl(193, 95%, 68%);
+}
+.fa-sass {
+	color: hsla(330, 44%, 57%, 1);
+}
+.fa-people-arrows-left-right {
+	content: '\e068';
+	color: hsl(60, 81%, 75%);
+}
+
+.exp-card__desc {
+	max-width: 75ch;
+	line-height: 1.6;
+	font-size: 0.9em;
+	color: var(--clr-off-white);
+}
+
+@media screen and (min-width: 600px) {
+	.exp-card__title {
+		justify-content: flex-start;
+		gap: 1em;
+	}
+}

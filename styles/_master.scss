@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+
+/* COLORS */
+$clr-primary: #2d4847;
+$clr-primary-offset: #3a5453;
+$clr-complement-light: #f4f3ee;
+$clr-complement-dark: #121616;
+/* $clr-accent: hsl(187, 59%, 80%); */
+$clr-accent: hsl(187, 79%, 80%);
+$clr-accent-neon: hsl(187, 98%, 48%);
+$clr-placeholder: #b1bbbb;
+$clr-neon-green: #58e900;
+$clr-ivk: #c69b4a;
+$clr-bca: #af1f2f;
+$clr-mongo: #001e2b;
+$clr-sass: #bf4080;
+$clr-node: #6fa861;
+$clr-js: #edd718;
+$clr-html: #e96228;
+$clr-css: #2862e9;
+$clr-figma: #9d56f7;
+$clr-react: #5ed3f3;
+
+/* FONT WEIGHTS */
+$fw-bold: 700;
+$fw-semi-bold: 600;
+$fw-medium: 500;
+$fw-regular: 400;
+$fw-light: 300;
+
+/* FONT SIZES */
+$fs-xl: clamp(2.5rem, 5vw + 1rem, 4rem); /* usually <h1> */
+$fs-l: clamp(1.75rem, 2vw + 0.5rem, 10rem); /* usually <h2> */
+$fs-ml: clamp(1.25rem, 1.5vw, 1.5rem); /* usually <h3> */
+$fs-m: 1.1rem; /* usually <h4> & <p> */
+$fs-sm: 0.9rem;
+$fs-s: 0.7rem;
+$fs-xs: 0.5rem;
+
+/* SHADOWS */
+$ts-hard: 1px 1px 0.0125em $clr-complement-dark;
+$bs-element: 0.25em 0.25em 1em 5px $clr-complement-dark;
+$bs-element-2: 1px 3px 5px 0 $clr-complement-dark;
+
+/* SPACING */
+$padding-layout: 3rem 1.5rem;
+$padding-layout-block: 3rem;
+$padding-layout-inline: 1.5rem;
+$padding-elem: 1em;
+$gap-flex: 2rem;
+
+/* DEFAULTS */
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: $clr-primary;
+	font-family: 'Rajdhani', sans-serif;
+	color: $clr-complement-light;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.15;
+}
+h1 {
+	text-shadow: $ts-hard;
+	font-size: $fs-xl;
+}
+h2 {
+	font-size: $fs-l;
+}
+h3 {
+	font-size: $fs-ml;
+}
+h4 {
+	font-size: $fs-m;
+}
+
+p {
+	font-size: $fs-m;
+	line-height: 1.25;
+}
+
+a {
+	font-size: $fs-m;
+}
+nav a {
+	font-weight: $fw-regular;
+	color: $clr-accent;
+	text-decoration: none;
+}
+nav a:hover {
+	text-transform: uppercase;
+	font-weight: $fw-bold;
+}
+
+.fa-circle-check {
+	color: $clr-neon-green;
+}
+.fa-bars {
+	color: $clr-accent;
+}
+.fa-sass {
+	color: $clr-sass;
+}
+.fa-js {
+	color: $clr-js;
+}
+.fa-node-js {
+	color: $clr-node;
+}
+.fa-react {
+	color: $clr-react;
+}
+.fa-leaf {
+	color: $clr-mongo;
+}
+.fa-html5 {
+	color: $clr-html;
+}
+.fa-css3 {
+	color: $clr-css;
+}
+.fa-figma {
+	color: $clr-figma;
+}
+
+img {
+	display: block;
+}

@@ -1,0 +1,43 @@
+@use 'master' as *;
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: calc($padding-elem * 1.5);
+	padding: $padding-layout;
+	color: $clr-placeholder;
+	background: $clr-primary-offset;
+
+	.footer-icons {
+		display: flex;
+		justify-content: center;
+		gap: calc($padding-elem * 1.5);
+		font-size: $fs-ml;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	p a {
+		color: inherit;
+	}
+}
+
+#bottom-nav {
+	all: unset;
+	width: 100%;
+}
+
+#bottom-nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background: none;
+
+	li {
+		width: max-content;
+		font-size: $fs-sm;
+	}
+}
