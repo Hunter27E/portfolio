@@ -161,7 +161,7 @@ nav ul {
 
 	h2 > span {
 		opacity: 0;
-		transition: opacity 500ms ease-in-out;
+		transition: opacity 250ms ease-in;
 	}
 	@for $i from 2 through 8 {
 		h2 > span:nth-child(#{$i}) {
@@ -197,6 +197,8 @@ nav ul {
 		padding: $padding-elem;
 		background: $clr-primary-offset;
 		box-shadow: $bs-element-2;
+		transform: translateY(75%);
+		transition: transform 250ms ease-in-out;
 
 		.fa-circle-check {
 			margin-right: 1ch;
@@ -205,6 +207,9 @@ nav ul {
 		p {
 			margin-top: $padding-elem;
 		}
+	}
+	&__card.show {
+		transform: translateY(0%);
 	}
 }
 
