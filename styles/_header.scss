@@ -66,6 +66,10 @@ header {
 	a {
 		font-size: $fs-ml;
 	}
+
+	img {
+		max-width: 100px;
+	}
 }
 
 #menu.open {

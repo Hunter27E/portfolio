@@ -152,24 +152,37 @@ nav ul {
 /* PITCH */
 
 #pitch {
-	display: flex;
-	flex-direction: column;
-	gap: $gap-flex;
-	row-gap: $gap-flex * 2;
-
-	h2,
-	#how-to-help {
-		padding: 0 $padding-layout-inline;
-	}
-
 	h2 {
-		padding-top: $padding-layout-block;
-		text-align: right;
+		padding: $padding-layout-block 0;
+		text-align: center;
+		line-height: 1.35;
 		color: $clr-placeholder;
 	}
 
+	h2 > span {
+		opacity: 0;
+		transition: opacity 500ms ease-in-out;
+	}
+	@for $i from 2 through 8 {
+		h2 > span:nth-child(#{$i}) {
+			transition-delay: calc(50ms * $i);
+		}
+	}
+
+	h2 span.show {
+		opacity: 1;
+	}
+}
+
+#how-to-help {
+	padding: $padding-layout-block 0;
+	background: url('../images/home/skills/webdev.jpg') rgba($clr-primary, 0.95);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: multiply;
+
 	.cta-btn {
-		margin: $padding-layout-block auto 0;
+		margin: calc($gap-flex * 2) auto 0;
 	}
 }
 
@@ -195,113 +208,29 @@ nav ul {
 	}
 }
 
-#timeline {
-	position: relative;
-	z-index: -2;
-	background: url('../images/home/skills/webdev.jpg') $clr-primary;
-	background-size: cover;
-	background-position: center;
-}
-#timeline::before {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	background: rgb($clr-primary, 0.9);
-}
-
-.tl-point {
-	display: grid;
-	grid-template-columns: min-content auto;
-	grid-template-areas:
-		'tl year'
-		'tl desc';
-	column-gap: $padding-layout-inline;
-	padding: $padding-elem;
-
-	&__dot {
-		grid-area: tl;
-		position: relative;
-		width: calc($padding-layout-inline * 0.05);
-		height: calc(($padding-layout-inline * 2) + 100%);
-		background: $clr-complement-light;
-	}
-	&__dot::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		width: 1.5ch;
-		height: 1.5ch;
-		border-radius: 100%;
-		background: $clr-accent;
-		transform: translate(-50%, 25%);
-	}
-
-	&__year {
-		grid-area: year;
-		margin-right: auto;
-		font-weight: $fw-bold;
-	}
-
-	&__desc {
-		grid-area: desc;
-	}
-}
-.tl-point:first-child {
-	padding-top: $padding-layout-block;
-}
-.tl-point:last-child {
-	padding-bottom: $padding-layout-block;
-	overflow: hidden;
-
-	.tl-point__dot {
-		height: 100%;
+@media screen and (min-width: 750px) {
+	h2 {
+		font-size: calc($fs-l * 1.5);
 	}
 }
 
-@media screen and (min-width: 850px) {
-	#pitch {
-		display: grid;
-		grid-template-columns: 1fr 3fr;
-		grid-template-areas:
-			'timeline text'
-			'timeline services';
-
-		h2 {
-			grid-area: text;
-		}
-	}
-
-	#pitch #how-to-help {
-		grid-area: services;
-		padding-bottom: $padding-layout-block;
-
-		.how-to-help__title,
-		.services__card {
-			margin-left: auto;
-		}
-	}
-
+@media screen and (min-width: 800px) {
 	.services {
 		&__card {
 			flex: 1 0 27%;
 			max-width: 45%;
 		}
 	}
+}
 
-	#timeline {
-		grid-area: timeline;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+@media screen and (min-width: 1000px) {
+	#how-to-help {
+		padding: calc($gap-flex * 2) 15vw $padding-layout-block;
 	}
+}
 
-	.tl-point {
-		&__dot {
-			height: calc(($padding-layout-inline * 2) + 250%);
-		}
+@media screen and (min-width: 1500px) {
+	#how-to-help {
+		padding: calc($gap-flex * 2) 25vw $padding-layout-block;
 	}
 }

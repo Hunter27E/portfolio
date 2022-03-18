@@ -99,8 +99,12 @@ nav a {
 	text-decoration: none;
 }
 nav a:hover {
-	text-transform: uppercase;
 	font-weight: $fw-bold;
+}
+@media screen and (min-width: 750px) {
+	nav a:hover {
+		text-transform: uppercase;
+	}
 }
 
 .fa-circle-check {
