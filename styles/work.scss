@@ -21,16 +21,19 @@
 	gap: calc($gap-flex);
 	position: relative;
 	padding: $padding-layout;
-	/* background-color: $clr-complement-dark; */
-	background-color: black;
 	background-color: rgb(black, 0.95);
 	background-size: cover;
 	background-position: top center;
 	background-attachment: fixed;
 	background-blend-mode: multiply;
+	transition: clip-path 250ms ease-in-out;
+}
+.xp:nth-of-type(odd) {
+	clip-path: inset(0 96% 0 0);
 }
 .xp:nth-of-type(even) {
 	text-align: right;
+	clip-path: inset(0 0 0 96%);
 
 	h3,
 	.xp-job {
@@ -41,19 +44,10 @@
 		flex-direction: row-reverse;
 	}
 }
-/* .xp::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	width: calc($padding-layout-inline / 2);
-	height: 100%;
+
+.xp.show {
+	clip-path: inset(0 0 0 0);
 }
-.xp:nth-of-type(odd)::before {
-	left: 0;
-}
-.xp:nth-of-type(even)::before {
-	right: 0;
-} */
 
 @supports (-webkit-overflow-scrolling: touch) {
 	header {
@@ -64,20 +58,10 @@
 #xp-ivk {
 	background-image: url('../images/xp/ivk-home.jpg');
 }
-/* #xp-ivk::before {
-	background: $clr-ivk;
-} */
-
-/* #ivk-bca-divider {
-	background: linear-gradient(to right, $clr-ivk, $clr-bca);
-} */
 
 #xp-bca {
 	background-image: url('../images/xp/bca-home.jpg');
 }
-/* #xp-bca::before {
-	background: $clr-bca;
-} */
 
 #xp-vcr {
 	background-image: url('../images/projs/vcr-home.jpg');
@@ -246,6 +230,7 @@
 	.xp {
 		padding-left: 15vw;
 		padding-right: 15vw;
+		transition: clip-path 500ms ease-in-out;
 	}
 	.xp::before {
 		width: 1.5rem;
