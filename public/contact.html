@@ -9,6 +9,7 @@
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="stylesheet" href="styles/contact.css" />
 		<script src="scripts/menu.js" defer></script>
+		<script src="scripts/contact-form.js" defer></script>
 		<!-- Font Awesome -->
 		<script
 			src="https://kit.fontawesome.com/8394acfd01.js"
@@ -42,12 +43,21 @@
 			<!-- -->
 		</header>
 		<main>
-			<!-- <img src="images/contact/mountain.svg" alt="" /> -->
-			<form action="PUT" id="contact-form">
+			<form
+				action="https://formspree.io/f/mwkwdodq"
+				method="POST"
+				id="contact-form"
+			>
 				<h2>CAN'T WAIT TO HEAR FROM YOU</h2>
 				<div class="form-group" id="name-group">
 					<label for="name" class="box-heading">NAME</label>
-					<input name="name" id="name" type="text" placeholder="John Doe" />
+					<input
+						name="name"
+						id="name"
+						type="text"
+						placeholder="John Doe"
+						required
+					/>
 				</div>
 				<div class="form-group" id="email-group">
 					<label for="email" class="box-heading">EMAIL</label>
@@ -56,10 +66,11 @@
 						id="email"
 						type="email"
 						placeholder="johndoe@mail.com"
+						required
 					/>
 				</div>
 				<div class="form-group" id="phone-group">
-					<label for="phone" class="box-heading">PHONE</label>
+					<label for="phone" id="label-phone" class="box-heading">PHONE</label>
 					<input
 						name="phone"
 						id="phone"
@@ -69,7 +80,7 @@
 				</div>
 				<div class="form-group" id="msg-group">
 					<label for="message" class="box-heading">MESSAGE</label>
-					<textarea name="message" id="message"></textarea>
+					<textarea name="message" id="message" required></textarea>
 				</div>
 				<button type="submit" class="cta-btn">SEND MESSAGE</button>
 			</form>

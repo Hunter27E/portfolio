@@ -36,6 +36,20 @@ main {
 		display: block;
 	}
 
+	label[for='phone'] {
+		position: relative;
+	}
+	label[for='phone']::after {
+		content: 'optional';
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-weight: $fw-light;
+		font-size: $fs-sm;
+		color: $clr-placeholder;
+		transform: translateX(125%) translateY(50%);
+	}
+
 	input,
 	textarea {
 		width: 100%;
