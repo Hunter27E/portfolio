@@ -24,7 +24,6 @@
 	background-color: rgb(black, 0.95);
 	background-size: cover;
 	background-position: top center;
-	background-attachment: fixed;
 	background-blend-mode: multiply;
 	transition: clip-path 250ms ease-in-out;
 }
@@ -47,12 +46,6 @@
 
 .xp.show {
 	clip-path: inset(0 0 0 0);
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-	header {
-		background-attachment: scroll;
-	}
 }
 
 #xp-ivk {
@@ -231,9 +224,6 @@
 		padding-left: 15vw;
 		padding-right: 15vw;
 		transition: clip-path 500ms ease-in-out;
-	}
-	.xp::before {
-		width: 1.5rem;
 	}
 
 	.xp-divider {
