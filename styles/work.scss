@@ -141,25 +141,35 @@
 
 .xp-quote {
 	grid-area: quote;
-	display: flex;
-	align-items: center;
+	display: grid;
+	grid-template-areas:
+		'left	text	right'
+		'.		author	.';
+	gap: 0.5rem;
 	padding-top: calc($padding-layout-block - $gap-flex);
 	max-width: 45ch;
 	margin: 0 auto;
-	font-weight: $fw-bold;
+	font-weight: $fw-semi-bold;
 	text-align: center;
 
 	.fa-quote-left,
 	.fa-quote-right {
-		font-size: 2em;
+		font-size: 1.75em;
+		color: rgb($clr-complement-light, 0.75);
 	}
 
 	.fa-quote-left {
-		align-self: flex-start;
+		grid-area: left;
 	}
 	.fa-quote-right {
 		align-self: flex-end;
+		grid-area: right;
 	}
+}
+.xp-quote::after {
+	content: attr(data-author);
+	grid-area: author;
+	font-weight: $fw-regular;
 }
 
 @media screen and (min-width: 750px) {

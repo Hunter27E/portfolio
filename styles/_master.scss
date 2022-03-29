@@ -24,9 +24,9 @@ $clr-react: #5ed3f3;
 /* FONT WEIGHTS */
 $fw-bold: 700;
 $fw-semi-bold: 600;
-$fw-medium: 500;
+$fw-medium: 500; // not imported
 $fw-regular: 400;
-$fw-light: 300;
+$fw-light: 300; // not imported
 
 /* FONT SIZES */
 $fs-xl: clamp(2.5rem, 5vw + 1rem, 4rem); /* usually <h1> */
