@@ -25,14 +25,14 @@
 	background-size: cover;
 	background-position: top center;
 	background-blend-mode: multiply;
-	transition: clip-path 250ms ease-in-out;
+	-transition: clip-path 250ms ease-in-out;
 }
 .xp:nth-of-type(odd) {
-	clip-path: inset(0 96% 0 0);
+	-clip-path: inset(0 96% 0 0);
 }
 .xp:nth-of-type(even) {
 	text-align: right;
-	clip-path: inset(0 0 0 96%);
+	-clip-path: inset(0 0 0 96%);
 
 	h3,
 	.xp-job {
@@ -45,7 +45,7 @@
 }
 
 .xp.show {
-	clip-path: inset(0 0 0 0);
+	-clip-path: inset(0 0 0 0);
 }
 
 #xp-ivk {
@@ -233,7 +233,7 @@
 	.xp {
 		padding-left: 15vw;
 		padding-right: 15vw;
-		transition: clip-path 500ms ease-in-out;
+		-transition: clip-path 500ms ease-in-out;
 	}
 
 	.xp-divider {
