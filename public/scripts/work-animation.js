@@ -5,14 +5,15 @@ const observer = new IntersectionObserver(
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				entry.target.classList.toggle('show');
+				console.log('intersecting');
 				observer.unobserve(entry.target);
 			}
 		});
 	},
 	{
 		root: null,
-		threshold: 0.2,
-		rootMargin: '0px',
+		threshold: 0,
+		rootMargin: '-25px',
 	}
 );
 
