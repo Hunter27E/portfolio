@@ -48,6 +48,10 @@
 	-clip-path: inset(0 0 0 0);
 }
 
+#xp-mc {
+	background-image: url('../images/xp/mc-home.jpg');
+}
+
 #xp-ivk {
 	background-image: url('../images/xp/ivk-home.jpg');
 }
@@ -113,6 +117,7 @@
 	ul {
 		list-style-type: none;
 		display: flex;
+		flex-wrap: wrap;
 		gap: calc($gap-flex / 2);
 		overflow-x: scroll;
 		scroll-snap-type: x mandatory;
@@ -137,6 +142,10 @@
 
 .xp-tech {
 	grid-area: tech;
+}
+
+.ts {
+	color: $clr-ts;
 }
 
 .xp-quote {
